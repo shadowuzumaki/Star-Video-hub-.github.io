@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineVerse - Premium Movie Experience</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="loading-screen">
+        <div class="loader"></div>
+        <h2>Loading CineVerse...</h2>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>CineVerse</h1>
+                <div class="logo-glow"></div>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#movies" class="nav-link">Movies</a>
+                <a href="#genres" class="nav-link">Genres</a>
+                <a href="#trending" class="nav-link">Trending</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Experience Cinema Like Never Before</h1>
+            <p class="hero-subtitle">Discover the world's finest collection of movies with stunning visuals</p>
+            <div class="hero-buttons">
+                <button class="btn-primary">Watch Now</button>
+                <button class="btn-secondary">Explore</button>
+            </div>
+        </div>
+        <div class="floating-particles"></div>
+    </section>
+
+    <section id="movies" class="movies-section">
+        <div class="container">
+            <h2 class="section-title">Featured Movies</h2>
+            
+            <div class="filter-bar">
+                <select id="genreFilter" class="genre-select">
+                    <option value="all">All Genres</option>
+                    <option value="action">Action</option>
+                    <option value="comedy">Comedy</option>
+                    <option value="horror">Horror</option>
+                    <option value="romance">Romance</option>
+                    <option value="thriller">Thriller</option>
+                    <option value="biography">Biography</option>
+                    <option value="drama">Drama</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="scifi">Sci-fi</option>
+                    <option value="south indian">South Indian</option>
+                    <option value="war">War</option>
+                </select>
+            </div>
+
+            <div class="movies-grid" id="moviesGrid">
+                <!-- Movies will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section id="trending" class="trending-section">
+        <div class="container">
+            <h2 class="section-title">Trending Now</h2>
+            <div class="trending-carousel">
+                <div class="carousel-track" id="trendingTrack">
+                    <!-- Trending movies will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="movie-modal" id="movieModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <img class="modal-poster" id="modalPoster" src="" alt="">
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalGenre"></p>
+                    <p id="modalYear"></p>
+                    <p id="modalRating"></p>
+                    <p id="modalDescription"></p>
+                    <div class="modal-buttons">
+                        <button class="btn-primary">Watch Now</button>
+                        <button class="btn-secondary">Add to Watchlist</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
